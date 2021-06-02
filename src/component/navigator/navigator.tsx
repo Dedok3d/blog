@@ -9,6 +9,9 @@ interface Props {
 function Navigator({ }: Props) {
 
     return <nav className={styles.nav}>
+        <div className={styles.menu}>
+            <span className={styles.link}>Меню</span>
+        </div>
         <ul className={styles.ul}>
             <li className={styles.li}>
                 <Link to={'/'} className={styles.link}>

@@ -35,8 +35,20 @@
     justify-content: center;
 }
 
+.menu {
+    display: none;
+    justify-content: start;
+    border-bottom: 1px solid #e13d3d;
+    padding: 0;
+    width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
-    .nav {
+    .ul {
         display: none;
+    }
+    .menu {
+        padding-top: 2em;
+        display: flex;
     }
 }
