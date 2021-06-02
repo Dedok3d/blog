@@ -69,10 +69,6 @@ function Article({ }: Props) {
                 <a className={styles.a} href="">Вконтакте</a>
                 <a className={styles.a} href="">Телеграмм</a>
                 <a className={styles.a} href="">Email</a>
-                <div className={styles.comments} >
-                    <a href="">Комментарии</a>
-                    <span>90</span>
-                </div>
             </span>
         </footer>
     </div>;

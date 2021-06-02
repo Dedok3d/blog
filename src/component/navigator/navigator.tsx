@@ -12,12 +12,12 @@ function Navigator({ }: Props) {
         <ul className={styles.ul}>
             <li className={styles.li}>
                 <Link to={'/'} className={styles.link}>
-                    Блог
+                    Лента
                 </Link>
             </li>
             <li className={styles.li}>
-                <Link to={'/practice'} className={styles.link}>
-                    Практика
+                <Link to={'/rating'} className={styles.link}>
+                    Рейтинг
                 </Link>
             </li>
             <li className={styles.li}>
