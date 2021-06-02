@@ -1,0 +1,16 @@
+# compiled output
+/dist
+/build
+/tmp
+/out-tsc
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dependencies
+/node_modules
+*.lock

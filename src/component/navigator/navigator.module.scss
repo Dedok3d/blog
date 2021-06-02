@@ -1,0 +1,36 @@
+.li {
+    display: inline-block;
+    margin: 0 2.75%;
+    line-height: 1em;
+}
+
+.ul {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e13d3d;
+    width: 450px;
+    padding: 0;
+}
+
+.link {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    display: block;
+    margin: 18px 0 12px;
+    padding: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+        color: #e13d3d;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
