@@ -1,5 +1,5 @@
 import { DependencyList, useEffect } from "react";
-import { AsyncEffectCallback } from "./model";
+import { AsyncEffectCallback, Params } from "./model";
 
 export function useEffectAsync(effect: AsyncEffectCallback, deps?: DependencyList) {
     useEffect(() => {
@@ -22,4 +22,19 @@ export function formatDate(date: Date) {
     }
 
     return [year, month, day].join('.');
+}
+
+export function formatParams(url: string, params: Params) {
+    let newUrl = url;
+    if (Object.keys(params).length > 0) {
+        newUrl = `${newUrl}?`;
+        Object.keys(params).forEach((key, index) => {
+            if (!params[key]) {
+                return;
+            }
+
+            newUrl = `${newUrl}${index > 0 ? '&' : ''}${key}=${params[key]}`;
+        });
+    }
+    return newUrl;
 }

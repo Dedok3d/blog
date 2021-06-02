@@ -8,4 +8,9 @@ export interface ArticleRecord {
     publishedAt: Date;
     updatedAt: Date;
 }
+
 export type AsyncEffectCallback = () => Promise<void>;
+
+export interface Params {
+    [key: string]: string | number;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import Article from '../../form/article/article';
 import Api from '../../logic/api';
@@ -12,6 +13,7 @@ interface Props {
 
 function MainPage({ }: Props) {
     const [records, setRecords] = useState<ArticleRecord[]>([]);
+    const [offset, setOffset] = useState(0);
 
     useEffectAsync(async () => {
         const api = new Api();
@@ -19,11 +21,25 @@ function MainPage({ }: Props) {
         setRecords(res);
     }, []);
 
+    const loadMore = async () => {
+        const api = new Api();
+        const res = await api.getArticles(offset + 10);
+        setRecords(old => [...old, ...res]);
+        setOffset(offset + 10);
+    }
+
     return <div className={styles.main}>
         <section>
-            {
-                records.map(record => <Article key={record.id} record={record} />)
-            }
+            <InfiniteScroll
+                dataLength={records.length}
+                next={loadMore}
+                hasMore={true}
+                loader={<h4>Loading...</h4>}
+            >
+                {
+                    records.map((record, index) => <Article key={index} record={record} />)
+                }
+            </InfiniteScroll>
         </section>
     </div>;
 }

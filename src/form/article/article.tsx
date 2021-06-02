@@ -10,25 +10,20 @@ interface Props {
 
 function Article({ record }: Props) {
 
-    const getDate = () => formatDate(new Date());
-
     return <div className={styles.article}>
         <header>
             <h2 className={styles.header}>
                 {record.title}
             </h2>
         </header>
-        <div>
-            <p>
-                {record.summary}
-            </p>
-        </div>
+        <img className={styles.img} src={record.imageUrl} />
+        <p>
+            {record.summary}
+        </p>
         <footer className={styles.footer}>
             <span className={styles.span}>
-                {getDate()}
-                <a className={styles.a} href="https://vk.com/durov">Вконтакте</a>
-                <a className={styles.a} href="https://t.me/durov_russia">Телеграмм</a>
-                <a className={styles.a} href="https://twitter.com/durov?lang=ru">Twitter</a>
+                {formatDate(record.publishedAt)}
+                <a className={styles.a} href={record.url}>{record.newsSite}</a>
             </span>
         </footer>
     </div>;
