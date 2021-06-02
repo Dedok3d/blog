@@ -41,14 +41,31 @@
     border-bottom: 1px solid #e13d3d;
     padding: 0;
     width: 100%;
+
+}
+
+.drop_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.icon {
+    width: 18px;
 }
 
 @media only screen and (max-width: 600px) {
     .ul {
         display: none;
     }
+    .nav {
+        display: block;
+    }
     .menu {
         padding-top: 2em;
         display: flex;
+    }
+    .link {
+        margin: 5px;
     }
 }

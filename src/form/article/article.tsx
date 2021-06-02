@@ -66,9 +66,9 @@ function Article({ }: Props) {
         <footer className={styles.footer}>
             <span className={styles.span}>
                 {getDate()}
-                <a className={styles.a} href="">Вконтакте</a>
-                <a className={styles.a} href="">Телеграмм</a>
-                <a className={styles.a} href="">Email</a>
+                <a className={styles.a} href="https://vk.com/durov">Вконтакте</a>
+                <a className={styles.a} href="https://t.me/durov_russia">Телеграмм</a>
+                <a className={styles.a} href="https://twitter.com/durov?lang=ru">Twitter</a>
             </span>
         </footer>
     </div>;
