@@ -37,17 +37,17 @@ function Navigator({ }: Props) {
         <ul className={styles.ul}>
             <li className={styles.li}>
                 <Link to={'/'} className={styles.link}>
-                    Лента
+                    News
                 </Link>
             </li>
             <li className={styles.li}>
                 <Link to={'/rating'} className={styles.link}>
-                    Рейтинг
+                    Rating
                 </Link>
             </li>
             <li className={styles.li}>
                 <Link to={'/feedback'} className={styles.link}>
-                    Обратная связь
+                    Feedback
                 </Link>
             </li>
         </ul>
