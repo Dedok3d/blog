@@ -1,0 +1,12 @@
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.svg {
+    width: 20em;
+    cursor: pointer;
+    padding: 2em 0;
+}

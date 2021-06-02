@@ -19,17 +19,12 @@ function Navigator({ }: Props) {
             showMenu && <ul className={styles.drop_menu}>
                 <li className={styles.li}>
                     <Link to={'/'} className={styles.link}>
-                        Лента
-                </Link>
-                </li>
-                <li className={styles.li}>
-                    <Link to={'/rating'} className={styles.link}>
-                        Рейтинг
+                        News
                 </Link>
                 </li>
                 <li className={styles.li}>
                     <Link to={'/feedback'} className={styles.link}>
-                        Обратная связь
+                        Feedback
                 </Link>
                 </li>
             </ul>
@@ -38,11 +33,6 @@ function Navigator({ }: Props) {
             <li className={styles.li}>
                 <Link to={'/'} className={styles.link}>
                     News
-                </Link>
-            </li>
-            <li className={styles.li}>
-                <Link to={'/rating'} className={styles.link}>
-                    Rating
                 </Link>
             </li>
             <li className={styles.li}>

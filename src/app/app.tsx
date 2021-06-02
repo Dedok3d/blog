@@ -8,6 +8,7 @@ import '../styles/fonts.module.scss';
 import MainPage from '../page/main/main-page';
 import Header from '../form/header/header';
 import NotFound from '../page/not-found/not-found';
+import Feedback from '../page/feedback/feedback';
 
 interface Props {
 }
@@ -21,6 +22,7 @@ function App({ }: Props) {
                 <Header />
                 <Switch>
                     <Route exact path="/" render={() => (<MainPage />)} />
+                    <Route exact path="/feedback" render={() => (<Feedback />)} />
                     <Route path="" exact={true} render={() => (<NotFound />)} />
                 </Switch>
             </Router>
