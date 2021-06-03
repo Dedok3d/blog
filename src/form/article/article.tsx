@@ -5,7 +5,7 @@ import { formatDate } from '../../logic/utils';
 import styles from './article.module.scss';
 
 interface Props {
-    record: ArticleRecord
+    record: ArticleRecord;
 }
 
 function Article({ record }: Props) {
@@ -16,7 +16,7 @@ function Article({ record }: Props) {
                 {record.title}
             </h2>
         </header>
-        <img className={styles.img} src={record.imageUrl} />
+        <object className={styles.img} data={record.imageUrl} type="image/png" />
         <p>
             {record.summary}
         </p>

@@ -58,7 +58,14 @@ p {
 
 .img {
     max-width: inherit;
-    height: 400px;
+    max-height: 400px;
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -68,12 +75,19 @@ p {
     .header {
         font-size: 30px;
     }
-    .img {
-        height: 250px;
+    .img { 
+        max-width: 550px;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
+    .img {
+        max-width: 450px;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {
     .header {
         font-size: 20px;
     }
@@ -81,6 +95,19 @@ p {
         font-size: 10px;
     }
     .img {
-        height: 150px;
+        max-width: 380px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .img {
+        max-width: 320px;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .img {
+        max-width: 280px;
     }
 }
