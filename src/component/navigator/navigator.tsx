@@ -13,7 +13,7 @@ function Navigator({ }: Props) {
     return <nav className={styles.nav}>
         <div className={styles.menu} onClick={() => setShowMenu(!showMenu)}>
             <Burger className={styles.icon} />
-            <span className={styles.link}>Меню</span>
+            <span className={styles.link}>Menu</span>
         </div>
         {
             showMenu && <ul className={styles.drop_menu}>
