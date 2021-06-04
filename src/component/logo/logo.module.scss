@@ -1,5 +1,19 @@
 .logo {
-    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Karla-Italic", cursive;
     font-size: 35px;
+    transition: 0.3s;
+
+    &:hover {
+        color: #e13d3d;
+        fill: #e13d3d;
+    }
+}
+
+.svg {
+    width: 2em;
+    padding-right: 10px;
 }
