@@ -80,7 +80,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
-      favicon: './assets/law.svg'
+      favicon: './assets/millennium-falcon.svg'
     }),
     new Dotenv(),
     new MiniCssExtractPlugin({ filename: 'style.[contenthash].css', }),
