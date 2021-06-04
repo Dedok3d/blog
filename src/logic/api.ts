@@ -4,7 +4,7 @@ import { formatParams } from "./utils";
 export default class Api {
     private url = 'https://api.spaceflightnewsapi.net/v3';
 
-    public getArticles = async (offset?: number) => {
+    public getArticles = async (offset?: number): Promise<ArticleRecord[]> => {
         const url = formatParams(`${this.url}/articles`, {
             _start: offset,
             _limit: 10
@@ -14,8 +14,6 @@ export default class Api {
             method: 'get',
         });
 
-        const json: ArticleRecord[] = await res.json();
-        return json;
-
+        return await res.json();
     }
 }
