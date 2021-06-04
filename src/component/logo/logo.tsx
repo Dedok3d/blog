@@ -6,7 +6,7 @@ interface Props {
 
 function Logo({ }: Props) {
 
-    return <div className={styles.logo}>Just news</div>;
+    return <div className={styles.logo}>Space news</div>;
 }
 
 export default Logo;
